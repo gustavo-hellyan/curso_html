@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+*{/*Configurações globais */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, #03A678, #014040);
+}
+
+/*tag main: é tipo uma div onde vai estar o conteúdo principal*/
+main{
+    background-color: white;
+    width: 600px;
+    padding: 20px;  /*Deixa um espaçamento após o texto*/
+    margin: auto; /*Deixa no meio e isso independe de mudar o tamanho da janela do navegador*/
+    border-radius: 10px;    /*Coloca bordas redondas nas pontas*/
+
+    box-shadow: 5px 5px 20px black;   /*Bota uma sombra*/
+    /*Parâmetros:
+    1 - quanto vai para a direita
+    2 - quanto vai para baixo
+    3 - quanto vai espalhar 
+    4 - cor ou transparência da sombra
+    */
+}
+
+p{
+    text-align: justify;
+    font-size: 12px;
+}
+
+h1{
+    color: #731702;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgb(52, 6, 6);  /*Mesma sequência de parâmetros de box-shadow*/
+}
+
+h2{
+    color: #F27405;
+}

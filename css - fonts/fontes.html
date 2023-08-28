@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipografia - fontes</title>
+
+    <style>
+        /* Importando fonte baixada */
+        @font-face{
+            font-family: 'JMH Typewriter';  /*Aqui colocamos o nome que queremos para a fonte*/
+            src: url('fonts/JMH Typewriter.otf') format('opentype'), url('fonts/JMH Typewriter.ttf') format('truetype');    /*source da font*/
+            font-weight: normal;
+            font-style: normal;
+
+            /*Tipos de format():
+                - opentype (.otf) 
+                - truetype (.ttf) 
+                - embedded-opentype
+                - truetype-aat (Apple Advanced Typography) */
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipografia - fontes</h1>
+    <h2>Anatomia dos tipos</h2>
+    <p>a letra x minúscula é a primeira letra criada durante a criação de uma fonte. Ela define a altura base (chamada altura x) de todas as letras minúsculas. <br>
+        <img src="media/fontes - anatomia do tipo.png" alt="" width="500">
+    </p>
+
+    <p>Fontes SERIFADAS: <br>
+    <img src="media/fontes - serifas.png" alt="" width="500"></p>
+
+    <img src="media/fontes - componentes anatomicos geométricos.png" width="500" alt=""> <br>
+    <img src="media/fontes - outros componentes.png" alt="" width="500"> <br>
+    
+    <p>Cada letra é um GLIFO ou caractere e o conjunto de todos os glifos de uma família forma uma FONTE<br>
+    <img src="media/fonte - glifo.png" alt="" width="200"></p>
+
+    <p>As fontes podem ter diferentes maneiras de representar um glifo. Essas diferentes maneiras são as FAMÍLIAS TIPOGRÁFICAS <br>
+    <img src="media/fonte - familia tipografica.png" alt="" width="500"></p>
+
+    <p>Categoria de fontes: <br>
+    <img src="media/fonte - categorias de fontes.png" width="500" alt=""> <br>
+    Dica: para documentos impressos use fontes serifadas, porém para textos grandes em tela, use fontes sans-serif. <br>
+    Fontes displays: não se preocupam em seguir as regras de anatomia.
+    </p>
+
+    <p>Não exagere botando muitas fontes no seu site. Geralmente temos três ou quatro (uma para título, uma de destaque e uma de texto normal)</p>
+
+
+
+
+
+
+    <h1>Fonte no CSS</h1>
+
+    <p style="font-family: Arial, Helvetica, sans-serif;"> A fonte Arial é sem serifa.</p>
+
+    <p>Quando você escreve style="font-family: Arial, Helvetica, sans-serif;", você está definindo três fontes. <br>
+        O navegador vai procurar primeiro Arial na máquina. Se não achar, vai procurar Helvetica. Se não achar, vai procurar qualquer fonte sans-serif do dispositivo <mark>(além do sans-serif temos também monospace, serif)</mark>. <br>
+        Isso é o que chamamos de Safe Font Combination. Você pode ver mais exemplos em <a href="https://www.w3bai.com/en-US/cssref/css_websafe_fonts.html#gsc.tab=0" target="_blank">CSS Web Safe Font Combinations</a></p>
+
+    <p>Caso o nome da sua fonte tenha duas palavras, escreva ele entre aspas</p>
+
+    <p>Normalmente, a fonte padrão do navegador é Times New Roman e o tamanho padrão: 16px.</p>
+
+    <h2>Tamanho, peso e estilo (font-size, font-weight e font-style)</h2>
+    <p>Medidas absolutas: cm, mm, in (polegadas), px (pixels), pt (ponto), pc (paica) <br>
+    Medidas relativas: em (relativa ao tamanho atual da fonte), ex (relativo ao tamanho x da fonte), rem, vw, vh, %</p>
+
+    <p>Mais recomendável: use px e em. Não use as outras.</p>
+    
+    <p>Se a fonte é 12px, 1 em = 12px, 2em = 24px, 0.5em = 6px...</p>
+
+    <p>Temos os pesos:</p>
+    <ul>
+        <li style="font-weight: lighter;">lighter</li>
+        <li style="font-weight: normal;">normal</li>
+        <li style="font-weight: bold;">bold</li>
+        <li style="font-weight: bolder;">bolder</li>
+    </ul>
+
+    <p>Estilos:</p>
+    <ul>
+        <li style="font-style: normal;">normal</li>
+        <li style="font-style: italic;">itálico</li>
+    </ul>
+    <p>Obs: note que aqui não estamos usando as tags em e strong</p>
+    <p style="text-decoration: underline;">Texto sublinhado</p>
+    <p style="text-decoration: none">Não sublinhado (padrão)</p>
+
+
+    <h2>Shorthand font</h2>
+    <p>Macete para configurar a fonte em uma só linha:</p>
+    <ul>
+        <li>font: style weight size family</li>
+        <li style="font: italic lighter 12px Arial, sans-serif">ex: font: italic lighter 12px Arial, sans-serif</li>
+        <li style="font: bold 14px Times New Roman, serif">ex: font: bold 14px Times New Roman, serif</li>
+    </ul>
+
+    <h2>Alinhamento de texto</h2>
+    <p style="text-align: left;">Este texto está a ESQUERDA! (padrão)</p>
+    <p style="text-align: center;">Este texto está CENTRALIZADO!</p>
+    <p style="text-align: right;">Este texto está a DIREITA!</p>
+    <p style="text-align: justify;">Este texto está JUSTIFICADO! </p>
+
+    <p>O texto abaixo está identado, com espaço de início de paragráfo. </p>
+    <p style="text-indent: 30px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit accusamus repellendus consectetur? Laudantium natus placeat dolore doloribus commodi voluptas autem, nobis eaque, in ab accusamus incidunt dolores enim temporibus exercitationem! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus qui veniam cumque ad, ab repudiandae numquam delectus ipsum sapiente ullam ipsa aliquam sit sequi quo! Blanditiis magnam laborum qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quam ipsa consectetur quo sed odio architecto cum voluptates est porro asperiores error provident ea, consequatur iste soluta sit sunt minus.</p>
+
+
+    <h2><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></h2>
+    <p style=
+            "@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+            font-family: 'Caprasimo', cursive;">
+            Prefira usar fontes do google. Alías, elas são livres e gratuitas</p>
+
+
+    <h2>Importando fonte externa</h2>
+    <p>Baixe a fonte e salve na pasta do seu código html. O código para importar está no head deste código .html que você está lendo</p>
+
+    <p style="font-family: 'JMH Typewriter';">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis impedit dolores dicta neque, officia sed odio minima nobis non est deserunt nihil porro voluptatem autem ut? Aperiam, officia? Nisi, est? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil similique eos repudiandae molestias quibusdam tempore est odio perferendis temporibus vero unde at, magnam aspernatur sed ut deleniti alias iure quas.</p>
+
+    <h2>Identificar fontes dentro de um site</h2>
+    <pA extensão <a href="https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh?hl=pt-br" target="_blank">Fonts Ninja</a> do Google Chrome permite descobrir a fonte, o tamanho e outras características dela</p>
+
+    <p>Mas se temos uma imagem, você pode usar</p>
+    <ul>
+        <li><a href="https://www.whatfontis.com/">What Font Is</a></li>    
+        <li><a href="https://www.fontsquirrel.com/"></a>Font Squirrel</li>
+    </ul>
+</body>
+</html>

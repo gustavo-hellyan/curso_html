@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens, audio, video, favicon</title>
+
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Imagens: </h1>
+    <p>
+        - A imagem precisa tá na mesma pasta do código <br>
+        - Em source, voce digita o nome da imagem e formato <br>
+        - voce pode apertar control espaço para o Visual studio Code exibir as imagens que estao na pasta do código <br>
+        - em alt (de alternative), voce bota o texto que explica a imagem (usado para leitores de tela - acessibilidade) <br>
+        - Você também pode pegar imagens da internet. Basta colocar o endereço (link) dela <br>
+    </p>
+
+    <p>Imagem do mesmo diretório:</p>
+    <img src="uma-pintura-de-um-lago-de-montanha-com-uma-montanha-ao-fundo_188544-9126.jpg" alt="imagem teste" width="500">
+    <p>Imagem de uma subpasta:</p>
+    <img src="media/rato.jpg" alt="">
+    <p>Imagem antes do endereço da pasta atual:</p>
+    <img src="../aaa.jpg" width="500" alt="">
+
+
+    <h1>Favicon</h1>
+    <ul>
+        <li>Configuramos o favicon em head</li>
+        <li>Formato .ico é mais recomendável que o .png</li>
+        <li>Site com vários icones para download: icoarchive</li>
+        <li>Site para fazer icone ou converter png para ico: favicon.io</li>
+    </ul>
+
+    <h2>Imagens dinâmicas</h2>
+    <P>Se o navegador tiver até 700 pixels, vai carregar a iamgem A. Se tiver até 1000 pixels, vai carregar a imagem B. Se não for nenhum dos casos, vai carregar a imagem C. A ordem de comandos é relevante. <br>
+    Isso é importante, pois vai melhorar a experiência do usuário. E quanto mais o usuário permanecer no site, mas o Google classifica o seu site como de boa experiência e recomenda para outras pessoas - ao pesquisarem um conteúdo do seu site.
+    </P>
+    <picture>
+        <source media="(max-width: 700px)" srcset="media/imagem_a.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="media/imagem_b.png" type="image/png">
+        <img src="media/imagem_c.png" alt="">
+    </picture>
+
+    <h1>Audio</h1>
+    <p>Podemos colocar audios mp3, ogg ou wav (esse é muito pesado, então não use em sites):</p>
+    
+    <audio src="Dua Lipa - Levitating.mp3" controls></audio>
+
+    <p>
+        Atributo controls mostra o player de audio; atributo autoplay faz o audio rodar assim que carregar a pagina; loop faz o audio se repetir <br>
+        preload="auto" ou deixar vazio: ao carregar o site, ele carrega automaticamente todos os dados e o arquivo, porém isso é ruim quando o arquivo é muito grande. Nesse caso, o site só terminaria de carregar quando todos os dados forem carregados. <br>
+        preload="metadata" ele carrega somente os metadados e só carrega o arquivo quando o usuário clicar <br>
+        preload="none" ele não carrega nada <br>
+
+    </p>
+
+    <p>Nesse modo abaixo, ele vai tentar carregar o primeiro arquivo, se nao conseguir, vai carregar o segundo arquivo</p>
+    <audio controls preload="metadata">
+        <source src="media/audio-mp3.mp3" type="audio/mpeg">
+        <source src="media/audio-wav.wav" type="audio/wav">
+    </audio>
+
+    <h2>Vídeo</h2>
+    <p>Podemso colocar vídeos nos formatos: mp4, webm, ogv. Agora, olha o vídeo abaixo</p>
+    <video src="media/video_curto.mp4" controls width=500 ></video>
+
+    <p>Assim como voce pode colocar diferentes imagens e áudios dinâmicos, voce pode colocar vídeos dinâmicos. E ainda pode colocar thumbnaiil!</p>
+    <video width="500" poster="media/thumbnail.jpeg" controls>
+        <source src="media/video_curto.mp4" type="video/mp4">
+    </video>
+
+    <h2>Vídeos hospedados on-line</h2>
+    <p>É mais ideal colocar vídeos já hospedados on-line para evitar consumir muitos dados. <br>
+        Para colocar vídeo do youtube, por exemplo, procure a opção <em>Compartilhar > Incorporar > Copie o código html</em></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bLwR05Bj-o0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <p>Vimeo</p>
+    <iframe src="https://player.vimeo.com/video/196652620?h=d0004f6b2a" width="640" height="272" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/196652620">Xmars - Short Animation.</a> from <a href="https://vimeo.com/dabarti">Dabarti CGI Studio</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+</body>
+</html>

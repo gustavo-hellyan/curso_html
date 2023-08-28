@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Cores</h1>
+    <p>Representando</p>
+    <p style="background-color: #0000ff; color: white">Você pode escrever uma cor em CSS pelo nome dela inglês, ou usando os parâmetros RGB em decimal, ou usando # e sua representação em hexadecimal (com seis dígitos)</p>
+    <blockquote>
+        blue <br>
+        rgb(0, 0, 255) <br>
+        #0000FF <br>
+    </blockquote>
+    No terceiro formato, cada dois dígitos representa a quantidade de vermelho, verde e azul da cor (RGB). Essa quantidade vai de 00 até FF (255). Nesse exemplo, temos 00 de vermelho, 00 de verde, e FF de azul = totalmente azul; <br>
+    Tem outro método usando HSL (hue, saturation e luminosity - matriz, saturação e luminosidade); <br>
+    Você ainda pode também configurar a transparência;
+
+    <p>Circulo cromático (exemplo): <br>
+        <img src="media/cromatico.jpg" alt="" width="400">
+    </p>
+
+    <p>Cores primárias, secundárias e terciárias: </p>
+        <img src="media/cores primárias.png" height="200" alt="">
+        <img src="media/cores secundárias.png" height="200" alt="">
+        <img src="media/cores terciarias.png" alt="" height="200">
+    <blockquote>cor terciária: fica entre uma primária e uma secundária; descrevemos usando primeiro o nome da cor primária e depois o da secundária </blockquote>
+    <p>Cores quentes e frias: <br>
+        <img src="media/cores_frias_quntes.png" alt="" width="400"> <br>
+    </p>
+
+    <p>Cores complementares: cores que mais contrastam entre si; a cor imediatamente oposta do círculo cromático    
+    </p>
+
+    <p>Cores análogas: cores vizinhas, não há  um contraste muito grande entre elas, mas há uma diferença perceptível</p>
+
+    <h2>Dicas para formar a paleta de cores do seu site</h2>
+
+    <p>Deve ter de 3 a 5 cores no máximo (nao considera branco e preto)</p>
+
+    <p>Escolha um cor, pegue duas analógas e uma complementar</p>
+
+    <p>Cores analógas relacionados, intercaldas, em quadrado, tetrádicas (duas e suas complementares): </p>
+        <img src="media/cores analogas relacionadas.png" width="250" alt="">
+        <img src="media/cores intercaladas.png" width="250" alt="">
+        <img src="media/cores em quadrado.png" width="250" alt="">
+        <img src="media/cores tetradicas.png" width="250" alt="">
+
+    <p>Monocromia: escolha uma cor e modifique três as configurações de saturação e luminosidade <br>
+        <img src="media/monocromia.png" alt="" width="400">
+    </p>
+
+    <p>Site gerador de paleta de cores: <a href="https://color.adobe.com/pt/create/color-wheel" target="_blank">Adobe Color</a></p>
+    <blockquote>função Disco de Cores, Extrair tema, Extrair gradiente, Explorar (para encontrar logos e paletas de exemplo)</blockquote>
+
+    <p><a href="https://paletton.com/" target="_blank">Paletton</a>: além de dar também paletas de cores, ele dá uma simulação de como ficaria seu site</p>
+
+    <h1>Gradiente de cores</h1>
+
+    <p>No gradiente, indicamos a direção e depois as cores que vamos usar</p>
+
+    <p style="width: 500px; background-image: linear-gradient(to right, #DBD246, #C53BDB);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore accusantium culpa quibusdam ipsam, illum nostrum neque, iure esse voluptate fugiat ducimus voluptatibus suscipit exercitationem corporis eaque quod id veritatis!</p>
+
+    <p >Você define a direção usando: <strong>to right, left, top, bottom</strong></p>
+
+    <p style="width: 500px; background-image: linear-gradient(to bottom, #DBD246, #C53BDB);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore accusantium culpa quibusdam ipsam, illum nostrum neque, iure esse voluptate fugiat ducimus voluptatibus suscipit exercitationem corporis eaque quod id veritatis!</p>
+
+    <p>Mais de uma cor e com uma direção em graus:</p>
+
+    <p style="background-image: linear-gradient(45deg, #3D368F, #C2DC3D, #8F1A6B); width: 500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore accusantium culpa quibusdam ipsam, illum nostrum neque, iure esse voluptate fugiat ducimus voluptatibus suscipit exercitationem corporis eaque quod id veritatis!</p>
+
+    <p>Podemos definir a porcentagem de uma das cores (verde em 70%):</p>
+    <p style="width: 500px; background-image: linear-gradient(to right, #2FDC49 70%, #DB2E57);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore accusantium culpa quibusdam ipsam, illum nostrum neque, iure esse voluptate fugiat ducimus voluptatibus suscipit exercitationem corporis eaque quod id veritatis!</p>
+
+    <p>Podemos deixar o gradiente de uma forma circular:</p>
+    <p style="width: 500px; background-image: radial-gradient(circle, #3D368F, #C2DC3D, #8F1A6B);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore accusantium culpa quibusdam ipsam, illum nostrum neque, iure esse voluptate fugiat ducimus voluptatibus suscipit exercitationem corporis eaque quod id veritatis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, ea corporis. Tempora qui hic eveniet minus voluptatum, quis voluptate quaerat cum culpa odio magnam commodi atque dolor vitae sit eius!</p>
+</body> 
+</html>

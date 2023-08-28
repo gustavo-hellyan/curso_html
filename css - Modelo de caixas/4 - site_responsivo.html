@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: grey;
+        }
+
+        main{
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+
+            min-width: 320px;
+	    /*menos que 320px, a main e o seu conteúdo não diminuirá. Haverá uma bala de rolagem*/
+	    /*320px: largura de celulares antigos em pé*/
+
+            max-width: 1200px;
+	    /*o tamanho máximo da main é 1200px. Além disso, ela não aumenta e nem o seu conteúdo/*
+
+	    /*entre 320px e 1200px, a main aumenta e diminui adaptando o seu conteúdo*/
+        }
+        img{
+            width: 100%;
+		/*a imagem vai ocupar 100% da width da main. Se a main diminui, a imagem também diminui*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Título1</h1>
+        <p>Responsividade: adaptar o conteúdo do seu site à tela em que ele está sendo exibido</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat fugiat magni commodi veritatis corporis at. Autem reiciendis quasi aperiam ducimus quas necessitatibus, eveniet laboriosam dignissimos mollitia nisi cum culpa quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita cupiditate quia quo ducimus qui officiis consequuntur porro, repellendus velit vero alias voluptatem totam veritatis inventore tempore amet excepturi. Exercitationem, unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi autem impedit esse eveniet ab maiores natus? Delectus, saepe? Quas eum quae aperiam deserunt aut perferendis obcaecati, eius esse dolorum!</p>
+
+        <picture>
+            <source media="(max-width: 600px)" srcset="../site_android/imagens/irina-blok-pq.jpg" type="image/jpg">
+            <img src="../site_android/imagens/irina-blok.jpg" alt="">
+        </picture>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat fugiat magni commodi veritatis corporis at. Autem reiciendis quasi aperiam ducimus quas necessitatibus, eveniet laboriosam dignissimos mollitia nisi cum culpa quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita cupiditate quia quo ducimus qui officiis consequuntur porro, repellendus velit vero alias voluptatem totam veritatis inventore tempore amet excepturi. Exercitationem, unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi autem impedit esse eveniet ab maiores natus? Delectus, saepe? Quas eum quae aperiam deserunt aut perferendis obcaecati, eius esse dolorum!</p>
+    </main>
+</body>
+</html>

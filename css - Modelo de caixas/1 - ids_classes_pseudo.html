@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDS e Classes</title>
+
+    <style>
+        #p1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 12px;
+
+            background-color: #93FB91;
+            width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #p2{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 12px;
+
+            background-color: #fbba91;
+            margin: auto;
+            width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .p3{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: right;
+            font-size: 12px;
+
+            background-color: #fb91c4;
+            width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #span1{
+            color: white;
+            background-color: #DB1BCE;
+        }
+        #span2{
+            color: white;
+            background-color: #1b7bdb;
+        }
+
+        /*Pseudoclasse*/
+        div{
+            background-color: aqua;
+            border: 1px solid black;    /*borda: largura tipo cor*/
+            height: 200px;
+            width: 300px;
+            text-align: center;
+            display: inline-block; /*coloca todas as divs na mesma linha*/
+        }
+        div:hover{
+            color: white; 
+            background-color: rgb(0, 129, 129);
+        }
+
+        div > p{    /*Vai mexer no paragráfo dentro de div*/
+            display: none;      /*não mostra o texto*/
+        }
+        div:hover > p{
+            display: block;     /*exibe o texto na tela*/
+        }
+
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+        /*Pseudo elementos*/
+        a::before{
+            content: '[link]';
+        }
+        a::after{
+            content: '[link]';
+        }
+
+        /*Colinha das simbologias vistas até agora
+            #   = id
+            .   = class
+            :   = pseudoc-lass
+            ::  = pseudo-element 
+            >   = children
+        */
+    </style>
+
+</head>
+<body>
+    <h1>IDs e Classes</h1>
+
+        <p>Usamos Id quando queremos personalizar a formatação de um único elemento (um paragráfo, título...) e usamos classe quando queremos personalizar (com a mesma formatação) mais de um elemento</p>
+        <p>id no HTML é # em CSS <br>
+        class no html é . em CSS <br>
+        : para pseudoclasse <br>
+        :: para pseudoelemento <br>
+        > para children (tags dentro de outras tags)    
+        </p>
+
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi unde sequi neque soluta, aut pariatur repellendus nisi cum tenetur sit aliquid modi perspiciatis sunt hic provident optio iusto quis placeat.</p>
+        <p id="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero rem vitae unde hic a ratione nulla quos animi impedit perferendis velit quod explicabo est temporibus obcaecati, laudantium doloremque eveniet quam.</p>
+        <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nobis facere perferendis, quis quod, iure accusantium, fugit quibusdam aperiam velit nulla veniam? Qui tempora reiciendis perspiciatis ab quam natus amet.</p>
+        <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae enim consectetur error laboriosam exercitationem quam molestias dolore optio ad numquam nobis earum dicta possimus, voluptatibus iure totam doloremque, eveniet deserunt.</p>
+
+        <p>Dica: ao nomear a classe, não nomeie de acordo com a forma (exemplo, class='azul'), pois a forma pode ser alterada depois. Nomeie de acordo com a função (exemplo: class='destaque').</p>
+
+        <p>Tag DIV e SPAN: <span id="span1">não faz nada específico</span>. São tags usadas para aplicar estilos/formatações através <span id="span2">classe ou id</span>. A div é a nível de bloco e a span a nível de linha.</p>
+
+        <p>Podemos aplicar em um elemento um id e uma classe ao mesmo tempo e também mais de uma classe (class='class1 class2...')</p>
+
+        <p>Há uma certa hierarquia entre as ids e classes</p>
+
+        <p>Podemos alterar a formatação de uma tag dentro de outra. Exemplo, </p>
+
+    <h1>Pseudo  classes</h2>
+        <p>Usamos dois pontos(:). Estão ligadas ao estado da div. São usadas para ações.</p>
+
+        <p>Ex: hover - Passe o mouse acimas do bloco</p>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex numquam pariatur ipsam vel delectus rerum placeat assumenda similique consequatur! Deleniti perferendis ipsum dicta minima officia recusandae illo esse at provident?</div>
+
+        <p><mark>Mas será que não é melhor fazer essa interação/animação no JavaScript?</mark></p>
+
+        <p>Ao passar o mouse acima do bloco, um texto será exibido</p>
+        <div>
+            <p>Você achou o texto escondido!</p>
+        </div>
+
+        <p>Passe o mouse nos links abaixos:</p>
+        <ul>
+            <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+            <li><a href="https://keep.google.com/" target="_blank">Google Keeps</a></li>
+        </ul>
+        <blockquote>obs: esses [link] você vê na parte de pseudoelementos</blockquote>
+
+    <h1>Pseudoelementos</h1>
+    <p>Os pseudoelementos mexem no conteúdo. Aqui usamos dois pontos duas vezes (::)</p>
+    
+</body>
+</html>

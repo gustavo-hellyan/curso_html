@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário básico</h1>
+    <p>Temos campos de preenchimento para o usuário</p>
+
+    <form action="pagina_de_cadastro.php" method="POST">
+        Nome: <br>
+        <input type="text" name="nome"> <br>
+        Senha: <br>
+        <input type="password" name="senha"> <br>
+        <input type="submit" name="botao_enviar" value="Enviar">
+    </form>
+    <blockquote>Em action colocamos a pagina que vai receber as informações</blockquote>
+
+    <h1>Quadradinho ao redor de uma área</h1>
+    <fieldset>
+        <legend>Janela</legend>
+        <p>Olaaaaa</p>
+    </fieldset>
+
+    <h1>Outros tipos de formulários</h1>
+    <p>Obs: <br>
+        Autofocus: ao carregar a pagina, o cursor já aparece naquele campo para o usuário preencher; <br>
+    </p>
+    <fieldset>
+        <legend>Login do usuário</legend>
+        <form action="pagina_de_cadastro.php" method="POST">
+            Campo obrigatório, autofocus, sugestão de preenchimento e texto meio apagado: <br>
+            <input type="text" name="email" autofocus required autocomplete="on" placeholder="seuemail@gmail.com"> <br>
+
+            Senha com tamanho máximo: <br>
+            <input type="password" name="senha" maxlength="6"> <br>
+
+            Campo desabilitado: <br>
+            <input type="text" name="Regiao" disabled> <br>
+
+            Seleção de itens com marcação: <br>
+            <input type="radio" name="tipo_de_conta" value="basica" checked> Básica <br>
+            <input type="radio" name="tipo_de_conta" value="profissional"> Profissional <br>
+            <input type="radio" name="tipo_de_conta" value="estudante"> Estudante <br>
+            <input type="radio" name="tipo_de_conta" value="professor"> Professor <br>
+            <blockquote>todos precisam ter o mesmo atributo name, pois pertencem ao mesmo formulario <br>
+                Checked já deixa a opção marcada</blockquote>
+
+            Checkbox: <br>
+            <input type="checkbox" name="cores" value="word" checked> Word <br>
+            <input type="checkbox" name="cores" value="excel"> Excel <br>
+            <input type="checkbox" name="cores" value="powerpoint"> Powerpoint <br>
+
+            Número (com máximo e mínimo): <br>
+            <input type="number" name="quantidade" min="1" max="4"> <br>
+            <blockquote>Na área de numero: temos tambem o atributo step="" para colocar intervalos permitidos (ex: de 10 em 10)<br></blockquote>
+
+            Quantidade por um deslizador (Slide): <br>
+            <input type="range" name="Idade"> <br> <br>
+
+            Escolher cor: <br>
+            <input type="color" name="cor"> <br>
+
+            Arquivo: <br>
+            <input type="file" name="arquivo"> <br>
+
+            Telefone: <br>
+            <input type="tel" name="telefone"> <br>
+
+            URL: <br>
+            <input type="URL" name="site"> <br>
+
+            Pesquisa: <br>
+            <input type="search" name="pesquisa"> <br>
+
+            Data (com atributos de data máxima e mínima): <br>
+            <input type="date" name="nascimento" min="2000-01-01" max="2005-01-31"> <br>
+
+            Mês e ano: <br>
+            <input type="month" name="mes_ano"> <br>
+
+            Semana: <br>
+            <input type="week" name="semana"> <br>
+
+            Hora: <br>
+            <input type="time" name="horário"> <br>
+
+            Data e hora: <br>
+            <input type="datetime-local" name="data_hora"> <br>
+
+            Mensagem (texto): <br>
+            <textarea name="mensagem" id="" cols="100" rows="10"></textarea> <br>
+            <blockquote>cols e rows não sao para limitar o texto. Servem para limitar a área de texto exibida para o usuário <br>
+                        Essa caixa de texto tem sugestão de ortografia, mas podemos desativar com spellcheck="false"
+            </blockquote>
+
+            Botão: <br>
+            <input type="button" value="Clique-me"> <br>
+            ou <br>
+            <button type="button">Clique-me</button> <br>
+
+            Seleção de itens: <br>
+            <select name="opcao">
+                <option value="item1">Item1</option>
+                <option value="item2">Item2</option>
+                <option value="item3" selected>Item3</option>
+            </select> <br>
+            <blockquote>atributo selected define item padrão</blockquote>
+
+            Seleção de itens com grupos <br>
+            <select name="opcao">
+                <optgroup label="Grupo 1">
+                    <option value="item1">Item1</option>
+                    <option value="item2">Item2</option>
+                    <option value="item3">Item3</option>
+                </optgroup>
+                <optgroup label="Grupo 2">
+                    <option value="item4">Item4</option>
+                    <option value="item5">Item5</option>
+                    <option value="item6">Item6</option>
+                </optgroup>
+            </select> <br>
+
+            Seleção de itens (agora você escreve e ele sugere): <br>
+            <input name="itens" list="lista_de_itens">
+            <datalist id="lista_de_itens">
+                <option value="ITEM_1">
+                <option value="ITEM_2">
+                <option value="ITEM_3">
+            </datalist>
+
+            <br>
+            Botao de enviar: <br>
+            <input type="submit" name="botao_enviar" value="Enviar">
+        </form>
+    </fieldset>
+
+    <h2>Formulário fora do form</h2>
+
+    <form id="form_cadastro" action="pagina_de_cadastro.php" method="POST"></form>
+    
+    Nome: <br>
+    <input type="text" name="nome" form="form_cadastro">
+</body>
+</html>

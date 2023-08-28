@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(to right, #554DF7, #25216B);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        header{
+            background-color: white;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            padding-left: 5px;
+            border-radius: 5px;     /*para colocar curvas nas bordas*/
+            box-shadow: 5px 5px 10px rgb(59, 54, 54);     /*deslocamento horizontal, deslocamento vertical, espalhamento, cor da sombra*/
+        }
+
+        h1{
+            color: #2B24AB;
+        }
+
+        main{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        section{
+            background-color: white;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        section#explicacao{
+            border: 3px solid black;
+        }
+
+        section > h2{
+            color: #53470a;
+        }
+
+        section > h3{
+            color: #7f6b06;
+        }
+
+        section > p{
+            text-align: justify;
+        }
+
+        footer{
+            color: white;
+            background-color: #141151;
+            text-align: center;
+        }
+
+        img{
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grouping tags</h1>
+
+        <nav>
+            <!-- nav de navegação de links eu acho, é interessante para colocar links que ficam no cabeçalho da página -->
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="explicacao">
+            <h2>Explicação</h2>
+                <p>Veja o arquivo html. Não estamos usando divs, mas as tags header (cabeçalho, não confundir com head), main, footer (rodapé), section, nav, article, aside. Elas tem a mesma função do div, porém deixam o nosso código html mais semântico, em um formato melhor para colocar o conteúdo do seu site. Ainda podemos editar melhor o estilo do seu site! Veja o CSS.</p>
+                <p>Veja que podemos alterar a formatação de uma tag dentro de outra. Exemplo: header > h1 altera os h1 dentro de header enquanto main > h1 altera os h1 dentros da main. Nesse caso, nem foi preciso aplicar ids.</p>
+        </section>
+
+        <section id="noticias"> 
+            <!-- acho que pode ser usado para definir uma seção, uma área onde vai ficar um tipo de conteúdo -->
+            <h2>Notícias</h2>
+            <h3>Política</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, expedita. Reiciendis, illo illum. Error, at soluta culpa hic porro commodi. Nemo vitae minus nulla modi quae voluptatem illo ea exercitationem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error iure magnam molestiae ad possimus eos itaque pariatur cumque minus temporibus quae excepturi reprehenderit repellat ea, nemo quod? Consequuntur, veniam sed.</p>
+                <img src="media/height e width.jpg" alt="">
+            <h3>Esportes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero ipsam fugiat recusandae impedit. Magnam eligendi, ea illum, fuga quo sapiente dolorum velit cum placeat commodi, accusantium eaque sint quod! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam consequuntur minima suscipit vitae itaque, nam debitis, voluptatibus quis dolor provident ea maxime perferendis similique, facilis molestias beatae reiciendis dignissimos laudantium!</p>
+            <h3>Entretenimento</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi praesentium ab voluptatum impedit cum itaque porro quas dolore quidem, maxime est modi necessitatibus magni quia asperiores aliquam, libero animi exercitationem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem assumenda aut vel natus incidunt cupiditate, quis alias ab sed repellat voluptates, fugit reprehenderit. Fuga laudantium labore architecto voluptatum commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil reiciendis atque minima laudantium mollitia eius soluta et iure architecto itaque nulla eveniet consequatur delectus voluptatum aperiam eaque, enim eum velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, accusamus non. Ipsam perspiciatis quaerat, ad aut hic nemo maiores magnam veritatis doloremque laboriosam magni. Explicabo quis reprehenderit rerum fugit. Repudiandae.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Artigo escrito por Gustavo Hellyan</p>
+    </footer>
+</body>
+</html>

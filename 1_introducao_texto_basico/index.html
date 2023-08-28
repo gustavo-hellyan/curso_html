@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algumas tags de texto</title>
+
+    <link rel="shortcut icon" href="imagens/logo_txt.png" type="image/x-icon">
+
+    <style>
+        span{color:red;}
+    </style>
+</head>
+<body>
+     <h1>Algumas tags de texto</h1>
+
+     <h2>Simbolo de tags</h2>
+    <p>Simbolo de tags: &lt;digite a tag aqui&gt <br>
+        Basicamente, todo o HTML é baseado em tags <br>
+        Você pode digitar comentários em &lt;!-- comentário --&gt; <br>     <!-- comentários -->    
+        Digite lorem para gerar um texto aleatório para testes. <br>
+    </p>
+    
+     <h2>Primeiras:</h2>
+     <p>
+        Título da aba: title (fica na parte de head do html) <br>
+        Título de nível 1: h1 (h de heading - título, cabeçalho) <br>
+        Parágrafo: p <br>
+        <em>Itálico: em ou i</em> <br>
+        <strong>Negrito: strong ou b</strong> <br>
+        <mark>Marca-texto: mark</mark> <br>
+        <ins>Sublinhado: ins ou u</ins> <br>
+        <del>Tachado (excluído): del</del> <br>
+    </p>
+    
+    <h2>Quebra de texto</h2>
+    <p>
+        Quebra de linha (tipo \n): br (de break row)<br>
+        Linha horizontal: hr 
+        <hr>
+        Essas tags não tem fechamento
+    </p>
+
+    <h2>Siglas</h2>
+    <p>Passe o mouse por cima da sigla <abbr title="Instituto Brasileiro de Geografia e Estatística">IBGE</abbr></p>
+
+    <h2>Códigos fonte</h2>
+    <p>Neste formato, a fonte monoespaçada - cada letra ocupa o mesmo espaço. Útil para digitar algorítmos</p>
+    <pre>
+    <code>
+        num1 = int(input("Digite o valor de x: "))
+        num2 = int(input("Digite o valor de y: "))
+        if(num1 > num2):
+            print(f'x é maior que y')
+        elif (num1 < num2):
+            print(f'x é menor que y')
+        else:
+            print('Os números são iguais')
+    </code>
+    </pre>
+
+    <h2>Sobrescrito e subescrito (para fórmulas)</h2>
+    <p>H<sub>2</sub>O</p>
+    <p>x<sup>2</sup> + 3x - 3 = 0</p>
+
+    <h2>Emojis e simbolos:</h2>
+    <p>Você não precisa memorizar os códigos dos emojis e simbolos. Pode pesquisar na <a href="https://emojipedia.org/" target="_blank">emojipedia</a> ou na internet em geral. Veja os exemplos abaixo:</p>
+    <ul>
+        <li>&#x[codigo];</li>
+        <li>&#x1F913; Código U+1F913</li>
+        <li>&#x1F92F; Código U+1F92F</li>
+        <li>&#x1F976; Código U+1F976</li>
+    </ul>
+    <ul>
+        <li>&[codigo];</li>
+        <li>&lt; less than (menor que)</li>
+        <li>&gt; greater than (maior que)</li>
+        <li>&Delta;</li>
+        <li>&delta;</li>
+    </ul>
+    <img src="media/simbolos.png" alt="" width="400px">
+
+    <h2>Citação e tabulação</h2>
+
+    <p>Aspas de citação: q <br>
+        Como disse o Davi Oliveira de Fìsica 2.0, <q>o difícil é um punhado de coisas fáceis</q></p>
+
+    <p>Citação com tabulação (ou somente fazer tabulação): blockquote
+    <blockquote>Não busques que os acontecimentos aconteçam como queres, mas quere que aconteçam como acontecem, e tua vida terá um curso sereno. Epicteto</blockquote>
+    </p>
+
+    <h2>Tag pre</h2>
+    <pre>
+Tudo o que está escrito aqui no código vai ser exibido na pagina
+        da mesma forma
+            que for escrito!
+                Incluindo espaços, quebras de linhas, tabulações.
+    </pre>
+
+    <h2>Conteúdo editável (contenteditable)</h2>
+    <div contenteditable>
+        <h3>Este texto é editável (clique nele)</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quas accusantium assumenda dolorem ut cupiditate ratione, esse veritatis magni exercitationem suscipit sequi amet nemo nam molestias ipsum quaerat laboriosam. Quia.</p>
+        
+        <blockquote contenteditable="false">Ps: as edições não ficarão salvas... (este trecho não é editável)</blockquote>
+    </div>
+
+</body>
+</html>

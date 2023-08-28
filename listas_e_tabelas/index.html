@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas e tabela</title>
+</head>
+<body>
+    <h1>Listas</h1>
+    <p>Lista não ordenada:</p>
+    <ul>
+        <li>linha 1</li>
+        <li>linha 2</li>
+    </ul>
+    <p>obs: </li> é opcional <br>
+        Atributo type="" (padrao, circle, square)</p>
+
+    <p>Lista ordenada</p>
+    <ol type="1">
+        <li>linha 1</li>
+        <li>linha 2</li>
+        <li>linha 3</li>
+    </ol>
+    <p>Em type, podemos botar 1, A, a, i, I para organizar por numero, letras, numeros gregos... <br>
+        atributo start="" diz onde vai começar a numeração da lista (parametro tem que ser um numero)</p>
+
+    <p>Lista com descrição</p>
+    <dl>
+        <dt>item 1</dt>
+        <dd>descrição 1</dd>
+        <dt>item 2</dt>
+        <dd>descrição 2</dd>
+    </dl>
+
+
+    <table>
+        <caption>Tabela de Clientes</caption>
+    
+        <tr>
+            <th>Nome</th>
+            <th>Numero</th>
+            <th>Plano</th>
+        </tr>
+    
+        <tr>
+            <td>Gustavo</td>
+            <td>(98) 984970537</td>
+            <td>Básico</td>
+        </tr>
+    
+        <tr>
+            <td>Raquel</td>
+            <td>(98) 985145549</td>
+            <td>Básico</td>
+        </tr>
+    
+        <tr>
+            <td>Ruth</td>
+            <td>(98) 987094073</td>
+            <td>Premium</td>
+        </tr>
+    
+        <tr>
+            <td>Total de pessoas:</td>
+            <td colspan="2">3</td>
+        </tr>
+        </table>
+    
+        <p>Tag caption é a legenda <br>
+        linha (dentro de table): tag tr <br>
+        coluna (vem dentro de tr): tag th para titulo da coluna e td para dado <br>
+        colspan indica quantas colunas um dado vai ocupar e rowspan indica quantas linhas um dado vai ocupar</p>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de fundo</title>
+
+    <style>
+        body{
+            background-image: url('midia/wallpaper001.jpg');
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        div#quadrado1{
+            background-image: url('midia/pattern003.png');
+        }
+        div#quadrado2{
+            background-image: url('midia/pattern003.png');
+            background-repeat: no-repeat;   /*por padrão, é repeat*/
+        }
+    </style>
+</head>
+<body>
+    <p>Todo elemento de caixa pode receber uma imagem de fundo usando background-image</p>
+    <div id="quadrado1"></div>
+
+    <div id="quadrado2"></div>
+</body>
+</html>

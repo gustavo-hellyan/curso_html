@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas (Box Model)</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        /*Testando box*/
+        #box-level{
+            font-size: 20px;
+            background-color: rgb(149, 69, 225);
+            height: 300px;
+            width: 300px;
+
+            border: 5px solid rgb(82, 39, 122);
+            /*largura estilo cor */
+            /* border-width: 5px; */
+            /* border-style: solid; */
+            /* border-color: rgb(82, 39, 122); */
+            /*style: solid para linha contínua, dashed é borda pontilhada*/
+
+            padding: 30px 30px 30px 30px;
+            /* topo direita base esquerda (sentido horário) */
+            /*a expressão acima é um shorthand para
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+        
+                padding: 10px faz todos os lados ficarem com 10px
+                padding: 10x 20x faz topo/base ficar com 10px e direita/esquerda ficar com 20px margin: idem
+            */
+            
+            margin: auto;
+            /*a linha acima centraliza a caixa horizontalmente */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* margin é semelhante a padding */
+
+            outline: 5px dashed rgb(223, 25, 157);
+            /* semelhante a border */
+
+        }
+        #inline-level{
+            color: white;
+            background-color: blue;
+
+            padding: 5px 10px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teoria</h1>
+    <img src="media/tipos de caixa.jpg" width="500px" alt="">
+    <img src="media/Tipos de caixa ex.jpg" width="500px" alt="">
+
+    <p>Box-level: quebra linha antes e após a caixa; a largura ocupa toda a largura da página (que é 100% do navegador como definido pelo viewport). Ex: tag div</p>
+    <p>Inline-level: não quebra linha antes nem após a caixa; a sua largura é somente a necessária para o seu conteúdo. Ex: tag span</p>
+
+    <p>Algumas características</p>
+    <ul>
+        <li>height e width: altura e largura do CONTEÚDO</li>
+        <li>Border ou borda</li>
+        <li>Outline ou contorno - fica entre a borda e a margem; fica coladinho da borda</li>
+        <li>Padding ou acolchoamento - entre o conteúdo e a borda</li>
+        <li>Margin ou margem - espaço após a borda, separa de outras caixas</li>
+    </ul>
+    <img src="media/height e width.jpg" width="500px" alt="">
+    <img src="media/border e padding.jpg" width="500px" alt="">
+    <img src="media/margin.jpg" width="500px" alt="">
+    <img src="media/margin.jpg" width="500px" alt="">
+
+    <p>Extras: user agent (ou agente de usuário) é o próprio navegador. Ele define estilos padrões em CSS para atributos que você não definiu no seu CSS.</p>
+
+
+
+
+    <h1>Testando</h1>
+    <p>As dicas só ficam visíveis em .html, mais especificamente na parte de style</p>
+
+    <p>As tags são configuradas para dizer se uma caixa é box-level ou inline-level. Você pode forçar essa configuração usando <br>
+        display: block; para box-level <br>
+        display: inline; para inline-level</p>
+
+    <h1 id="box-level">O h1 é uma caixa do tipo box level</h1>
+    <p>Porém, os <a href="" id="inline-level">links</a> são exemplos de inline-level</p>
+</body>
+</html>
